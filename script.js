@@ -102,7 +102,6 @@ scene.add(rPinchSphere)
 const lPinchSphere = new THREE.Mesh(sphere2, defaultMat2)
 scene.add(lPinchSphere)
 
-
 // Line Object
 
 const cube = new THREE.BoxGeometry(.05, .05, .05)
