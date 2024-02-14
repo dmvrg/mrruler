@@ -38,7 +38,6 @@ fontLoader.load(
         text = new THREE.Mesh(textGeometry, textMaterial)
         scene.add(text)
 
-        // Calculate the center of the text geometry
         textGeometry.computeBoundingBox();
         const textWidth = textGeometry.boundingBox.max.x - textGeometry.boundingBox.min.x;
         text.position.x = -textWidth / 2;
@@ -177,15 +176,12 @@ renderer.setAnimationLoop( function () {
     const rIndexThumbDist = rIndexObj.position.distanceTo(rThumbObj.position);
     const lIndexThumbDist = lIndexObj.position.distanceTo(lThumbObj.position);
 
-
     if (rIndexThumbDist < 0.02) {
 
         rPinchSphere.position.x = rThumbObj.position.x;
         rPinchSphere.position.y = rThumbObj.position.y;
         rPinchSphere.position.z = rThumbObj.position.z;
 
-
-    
     }
 
     if (lIndexThumbDist < 0.02) {
